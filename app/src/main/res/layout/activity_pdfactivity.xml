@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.PDFActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/SCREEN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imgBack"
+                style="@style/btnColor"
+                android:layout_width="20dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="12dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/next" />
+
+            <ImageView
+                android:id="@+id/imgMore2"
+                style="@style/btnColor"
+                android:layout_width="33dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/baseline_more_vert_24" />
+
+            <ImageView
+                android:id="@+id/imgBook"
+                style="@style/btnColor"
+                android:layout_width="20dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/imgMore2"
+                app:layout_constraintEnd_toStartOf="@+id/imgMore2"
+                app:layout_constraintTop_toTopOf="@+id/imgMore2"
+                app:srcCompat="@drawable/cuon" />
+
+            <ImageView
+                android:id="@+id/imgSearch"
+                style="@style/btnColor"
+                android:layout_width="20dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="24dp"
+                app:layout_constraintBottom_toBottomOf="@+id/imgBook"
+                app:layout_constraintEnd_toStartOf="@+id/imgBook"
+                app:layout_constraintTop_toTopOf="@+id/imgBook"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/search" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.github.barteksc.pdfviewer.PDFView
+            android:id="@+id/pdfView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/grey">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:textColor="@color/white"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:id="@+id/currentPageTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginBottom="30dp"
+                    android:background="@drawable/bkg_txtnumber"
+                    android:text="TextView"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imgDraw"
+                    android:layout_width="73dp"
+                    android:layout_height="114dp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:srcCompat="@drawable/edit2" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.github.barteksc.pdfviewer.PDFView>
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

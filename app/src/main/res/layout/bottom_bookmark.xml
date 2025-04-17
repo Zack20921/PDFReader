@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_bookmark_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/Background"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:text="Reader Settings"
+        style="@style/TextColor"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:id="@+id/textView4"
+        style="@style/TextColor2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reader mode" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgBook"
+            android:layout_width="34dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/book"
+            style="@style/btnColor"/>
+
+        <TextView
+            android:id="@+id/txt19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:text="Book mode"
+            style="@style/TextColor"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imgBook"
+            app:layout_constraintStart_toEndOf="@+id/imgBook"
+            app:layout_constraintTop_toTopOf="@+id/imgBook" />
+
+        <ImageView
+            android:id="@+id/imgScoll"
+            android:layout_width="34dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgBook"
+            app:srcCompat="@drawable/cuon"
+            style="@style/btnColor"/>
+
+        <TextView
+            android:id="@+id/txt11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:text="Scroll mode"
+            style="@style/TextColor"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imgScoll"
+            app:layout_constraintStart_toEndOf="@+id/imgScoll"
+            app:layout_constraintTop_toTopOf="@+id/imgScoll" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupReaderMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/txt11"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txt19">
+
+            <RadioButton
+                android:theme="@style/radioColor"
+                android:id="@+id/radioBook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:theme="@style/radioColor"
+                android:id="@+id/radioScroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp" />
+        </RadioGroup>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        style="@style/TextColor2"
+        android:id="@+id/textView13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Theme mode" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imgLight"
+            android:layout_width="34dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/sun"
+            style="@style/btnColor" />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:text="Light mode"
+            style="@style/TextColor"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imgLight"
+            app:layout_constraintStart_toEndOf="@+id/imgLight"
+            app:layout_constraintTop_toTopOf="@+id/imgLight" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="34dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgLight"
+            app:srcCompat="@drawable/moon"
+            style="@style/btnColor" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:text="Night mode"
+            style="@style/TextColor"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView9"
+            app:layout_constraintStart_toEndOf="@+id/imageView9"
+            app:layout_constraintTop_toTopOf="@+id/imageView9" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupThemeMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView11"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView19">
+
+            <RadioButton
+                android:id="@+id/radioLight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/radioColor"/>
+
+            <RadioButton
+                android:theme="@style/radioColor"
+                android:id="@+id/radioNight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp" />
+        </RadioGroup>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
